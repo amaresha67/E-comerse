@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const connectDatabase = require("./config/Database");
 const router = require("./routers/routs");
 const app = express();
-const url="https://e-comerse-o8fp.onrender.com" ;
+const url="https://e-comerse-za39.onrender.com" ;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
