@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const connectDatabase = require("./config/Database");
 const router = require("./routers/routs");
 const app = express();
+const url="https://e-comerse-za39.onrender.com" ;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -14,6 +15,6 @@ const db = connectDatabase.connection;
 db.on("error", (error) => console.error("MongoDB connection error:", error));
 db.once("open", () => console.log("Connected to MongoDB"));
 app.use("/", router);
-app.listen(3001, () => {
-  console.log("Server is running on http://localhost:3001");
+app.listen(url, () => {
+  console.log("Server is running on "+url);
 });
